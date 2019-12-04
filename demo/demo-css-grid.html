@@ -235,12 +235,13 @@
         //   room = { url: 'https://your-domain.daily.co/hello' }
         //   ownerLink = room.url;
         //
-        room = await createMtgRoom();
-        ownerLink = await createMtgLinkWithToken(
+          room = { url: 'https://loopteam.daily.co/hello' };//await createMtgRoom();
+	  ownerLink = room.url;
+/*        ownerLink = await createMtgLinkWithToken(
           room, { 
             is_owner: true,
           });
-
+*/
         callFrame = window.DailyIframe.wrap(
 			    document.getElementById('call-frame'),
           { customLayout: true }
